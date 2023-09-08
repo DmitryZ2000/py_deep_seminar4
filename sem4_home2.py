@@ -6,7 +6,9 @@ def dic_func(**kwarg):
     """ Функция создания словаря """
     my_dic = {}
     for key, value in kwarg.items():
+        # print(key.__hash__)
         my_dic[key] = value
     return my_dic
 
-print(dic_func(a=1, b=2, c=3, apple='iphone14'))
+# print(dic_func(a=1, b=2, c=3, apple = 'iphone14'))
+print(dic_func(a=1, b=2, c=3, mylist = [10, 20, 30]))

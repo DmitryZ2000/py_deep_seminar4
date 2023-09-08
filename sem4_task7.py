@@ -8,5 +8,3 @@ dic_comp = {'comp1':[200, 300, -1000, 400 ], 'comp2':[350, 500, 900, -150,200], 
 res1 = all(map(lambda i: sum(dic_comp[i]) > 0, dic_comp.keys()))
 res2 = all(map(lambda i: sum(dic_comp[i]) > 0, dic_comp)) # Без указания метода берутся ключи словаря
 print(res1, res2)
-
-
