@@ -7,7 +7,6 @@ def change_s(my_str: str) -> str:
     """ Описание функции """
     if my_str[-1] == 's' and  len(my_str) > 1:
         temp = my_str[0:-1]
-        # print(temp)
         my_str = None
         return my_str, temp
     return my_str
@@ -15,9 +14,9 @@ def change_s(my_str: str) -> str:
 
 a1 = 'seasons'
 a2 = 'tables'
-a3 = 'stat'
+a3 = 'state'
 a4 = 'thunder'
 a5 = 'laptops'
 
-print(change_s(a1))
+print(change_s(a5))
 
