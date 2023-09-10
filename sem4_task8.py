@@ -3,20 +3,27 @@
 # оканчивающихся на s (кроме переменной из одной буквы s) на None.
 # Значения не удаляются, а помещаются в одноимённые переменные без s на конце.
 
-def change_s(my_str: str) -> str:
+def change_dic(my_dict: dict) -> dict:
     """ Описание функции """
-    if my_str[-1] == 's' and  len(my_str) > 1:
-        temp = my_str[0:-1]
-        my_str = None
-        return my_str, temp
-    return my_str
+    temp_dic = {}
+    for key, value in my_dict.items():        
+        if str(key)[-1] == 's' and  len(str(key)) > 1:
+            my_dict[key] = None
+            temp_dic[str(key)[0:-1]] = value 
+        my_dict = my_dict | temp_dic
+    return my_dict
+
+seasons = 5
+tables = 9
+state = 25
+thunder = 100
+laptops = 200
+
+global_dict = {key: value for key, value in globals().items() if not key.startswith('__')}
+# global_dict_2 = dict(filter(lambda x: not x[0].startswith('__'),globals().items()))
+# print(global_dict_2)
+print(global_dict)
 
 
-a1 = 'seasons'
-a2 = 'tables'
-a3 = 'state'
-a4 = 'thunder'
-a5 = 'laptops'
-
-print(change_s(a5))
+print(change_dic(global_dict))
 
